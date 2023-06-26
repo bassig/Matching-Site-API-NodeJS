@@ -1,0 +1,44 @@
+[
+    {
+        "_id": 1,
+        "name": "mrs.Cohen",
+        "goal": 100,
+        "collectedAmount":0,
+        "groupId": "1"
+    },
+    {
+        "_id": 2,
+        "name": "mrs.Levi",
+        "goal": 250,
+        "collectedAmount":0,
+        "groupId": "1"
+    },
+    {
+        "_id": 3,
+        "name": "Shana",
+        "goal": 100,
+        "collectedAmount":0,
+        "groupId": "2"
+    },
+    {
+        "_id": 4,
+        "name": "Chana",
+        "goal": 300,
+        "collectedAmount":0,
+        "groupId": "2"
+    },
+    {
+        "_id": 5,
+        "name": "Miriam",
+        "goal": 350,
+        "collectedAmount":0,
+        "groupId": "3"
+    },
+    {
+        "_id": 6,
+        "name": "Tziri",
+        "goal": 180,
+        "collectedAmount":0,
+        "groupId": "3"
+    }
+]
