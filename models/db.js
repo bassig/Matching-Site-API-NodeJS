@@ -1,14 +1,28 @@
-const mongoose=require('mongoose');
-const connect=async()=>{
-    await mongoose.connect(process.env.DATABASE_URL)
-    mongoose.connection.once("open", async () => {
-        console.log("Connected to database");
-    });
-      
-    mongoose.connection.on("error", (err) => {
-        console.log("Error connecting to database  ", err);
-    });
+const mongoose = require('mongoose');
+class Connection {
+    constructor() {
+        const url = process.env.DATABASE_URL
+        this.connect(url).then(() => {
+            console.log('✔ Database Connected');
+        }).catch((err) => {
+            console.error('✘ MONGODB ERROR: ', err.message);
+        });
+    }
+    async connect(url) {
+        try {
+            await mongoose.connect(url);
+        } catch (e) {
+            throw e;
+        }
+    }
+    disconnect() {
+        mongoose.disconnect().then(() => {
+            console.log('Disconnected from database');
+        }).catch((err) => {
+            console.error('Error disconnecting from database:', err);
+        });
+    }
 }
-const disconnect=()=>{}
 
-module.exports={connect,disconnect}
+
+module.exports = new Connection();

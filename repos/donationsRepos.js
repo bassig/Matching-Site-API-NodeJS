@@ -1,21 +1,19 @@
-const db=require('../models/db');
-const Donation=require('../models/donation');
+const db = require('../models/db');
+const Donation = require('../models/donation');
 
-class DonationRepos{
-    constructor(){
-        db.connect();
-    }
-    async getAll(){
+class DonationRepos {
+
+    async getAll() {
         return await Donation.find({});
     }
-    async createDonation(donation){
+    async createDonation(donation) {
         try {
             await Donation.create(donation);
-        } catch(err) {
+        } catch (err) {
             console.log('Error::' + err);
             throw err
         }
     }
 }
 
-module.exports=new DonationRepos();
+module.exports = new DonationRepos();

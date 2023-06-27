@@ -1,12 +1,12 @@
-const donationRepos=require('../repos/donationsRepos');
+const donationRepos = require('../repos/donationsRepos');
 
-class DonationServise{
-    async getAll(){
+class DonationServise {
+    async getAll() {
         return await donationRepos.getAll();
     }
-    async createDonation(donation){
+    async createDonation(donation) {
         return await donationRepos.createDonation(donation);
     }
 }
 
-module.exports=new DonationServise();
+module.exports = new DonationServise();

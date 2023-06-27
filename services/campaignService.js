@@ -1,15 +1,18 @@
-const campaignRepos=require('../repos/campaignRepos');
+const campaignRepos = require('../repos/campaignRepos');
 
-class CampaignServise{
-    async getCampaign(id){
-        return campaignRepos.getCampaign(id);
+class CampaignServise {
+    async getCampaigById(id) {
+        return campaignRepos.getCampaignById(id);
     }
-    async createCampaign(campaign){
+    async createCampaign(campaign) {
         return await campaignRepos.createCampaign(campaign);
     }
-    async updateGoal(id,newGoal,isManager){
-        return await campaignRepos.updateGoal(id,newGoal,isManager)
+    async updateGoal(id, newGoal, isManager) {
+        return await campaignRepos.updateGoal(id, newGoal, isManager)
+    }
+    async updateCollectedAmount(id, donationAmount) {
+        return await campaignRepos.updateCollectedAmount(id, donationAmount)
     }
 }
 
-module.exports=new CampaignServise();
+module.exports = new CampaignServise();

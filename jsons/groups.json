@@ -3,24 +3,32 @@
     "_id": 1,
     "name": "Teachers",
     "description": "all teachers in schools",
-    "groupGoal": 2000
+    "groupGoal": 2000,
+    "collected": 0,
+    "campaignId": "1"
   },
   {
     "_id": 2,
     "name": "9th grade",
     "description": "9th graders students",
-    "groupGoal": 1000
-  } ,
+    "groupGoal": 1000,
+    "collected": 0,
+    "campaignId": "1"
+  },
   {
     "_id": 3,
     "name": "10th grade",
     "description": "10th graders students",
-    "groupGoal": 1000
-  } ,
+    "groupGoal": 1000,
+    "collected": 0,
+    "campaignId": "1"
+  },
   {
     "_id": 4,
     "name": "11th grade",
     "description": "11th graders students",
-    "groupGoal": 1000
-  } 
+    "groupGoal": 1000,
+    "collected": 0,
+    "campaignId": "1"
+  }
 ]
